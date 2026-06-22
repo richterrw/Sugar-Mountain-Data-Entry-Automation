@@ -1,94 +1,94 @@
-# Sugar Mountain Data Entry Automation
+# Sugar Mountain Ski Data Entry Automation
 
 ## 📌 Overview
 
-This project is an automation tool designed to streamline repetitive data entry tasks related to Sugar Mountain operations. The script reduces manual input, improves accuracy, and saves significant time by automating structured form entry and data processing workflows.
+This project automates the process of transferring structured employee/customer data from an Excel file into the Sugar Mountain Ski Data entry system.
 
-The goal of this project is to demonstrate practical application of Python automation in a real-world business context.
+The script reads data from an Excel spreadsheet stored locally (OneDrive) and uses UI automation to input the data directly into the Ski Data system. This reduces manual entry time, improves accuracy, and streamlines repetitive administrative workflows.
 
 ---
 
 ## ⚙️ Features
 
-* Automates repetitive data entry tasks
-* Reduces human error in manual input processes
-* Handles structured form workflows efficiently
-* Improves speed and consistency of data processing
-* Lightweight and easy to modify for different workflows
+* Reads structured data directly from Excel (`.xlsx`)
+* Automates form entry into Ski Data system
+* Handles multiple input fields (name, DOB, group information)
+* Automates dropdown selection and confirmation dialogs
+* Processes multiple rows in a dataset sequentially
+* Includes fail-safe protection for mouse control
 
 ---
 
 ## 🧠 Technologies Used
 
 * Python 3
-* (Add libraries you used here, e.g. `pyautogui`, `pandas`, `selenium`, etc.)
+* pandas (Excel data handling)
+* openpyxl (Excel file reading)
+* pyautogui (keyboard & mouse automation)
+* os (file path handling)
+* time (execution control)
 
 ---
 
-## 📂 Project Structure
+## 📊 How It Works
+
+1. Loads an Excel file from the user’s local OneDrive directory
+2. Assigns column labels: First Name, Last Name, DOB, Group Name
+3. Iterates through each row of the dataset
+4. Uses screen coordinates to interact with the Ski Data system interface
+5. Inputs data into each required field using automated keyboard actions
+6. Handles dropdown selections and confirmation prompts
+7. Repeats the process until all rows are completed
+
+---
+
+## ⚠️ Important Notes
+
+* Screen coordinates must be calibrated for the specific monitor and resolution
+* The application window must remain in a fixed position during execution
+* `pyautogui.FAILSAFE = True` is enabled (move mouse to top-left corner to stop script immediately)
+* Do not interact with keyboard/mouse while the script is running
+
+---
+
+## 📁 Project Structure
 
 ```
-Sugar-Mountain-Data-Entry-Automation/
+Sugar-Mountain-Ski-Data-Automation/
 │
-├── DATA ENTRY SKI.py              # Main automation script
-├── README.md            # Project documentation
-└── (other files if needed)
+├── main.py              # Main automation script
+├── Sample.xlsx         # Input data file
+└── README.md           # Project documentation
 ```
 
 ---
 
-## 🚀 How to Run
+## 💡 Impact
 
-### 1. Clone the repository
+This tool demonstrates practical automation of real-world administrative workflows by:
 
-```bash
-git clone https://github.com/richterrw/Sugar-Mountain-Data-Entry-Automation.git
-```
-
-### 2. Navigate into the project
-
-```bash
-cd Sugar-Mountain-Data-Entry-Automation
-```
-
-### 3. Install dependencies (if applicable)
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the script
-
-```bash
-python main.py
-```
+* Eliminating repetitive manual data entry
+* Reducing human error in operational systems
+* Increasing efficiency of data processing tasks
+* Applying Python automation to a real business environment
 
 ---
 
-## 📊 Why This Project Matters
+## 🚀 Future Improvements
 
-This project demonstrates:
-
-* Practical automation skills in Python
-* Ability to improve real business workflows
-* Experience with scripting and process optimization
-* Attention to efficiency and error reduction
+* Replace coordinate-based automation with Selenium or API integration (if available)
+* Add logging system for tracking processed rows
+* Add error recovery for failed inputs
+* Build a GUI for non-technical users
+* Package into a standalone executable
 
 ---
 
 ## 👨‍💻 Author
 
 **Robert Richter**
-Actuarial Science & Mathematics Student
+Mathematics & Actuarial Science
 Appalachian State University
 
 GitHub: https://github.com/richterrw
 
----
-
-## 📌 Future Improvements
-
-* Add GUI interface for non-technical users
-* Improve error handling and logging
-* Expand automation to additional workflows
-* Integrate database storage for outputs
