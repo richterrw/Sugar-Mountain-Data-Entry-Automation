@@ -30,7 +30,7 @@ The goal of this project is to demonstrate practical application of Python autom
 ```
 Sugar-Mountain-Data-Entry-Automation/
 │
-├── main.py              # Main automation script
+├── DATA ENTRY SKI.py              # Main automation script
 ├── README.md            # Project documentation
 └── (other files if needed)
 ```
